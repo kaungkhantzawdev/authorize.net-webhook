@@ -56,6 +56,7 @@ file_put_contents("data.json", $response)
         <form method="post" action="get-token.php" id="formAuthorizeNetTestPage" name="formAuthorizeNetTestPage">
           <button id="btnContinue" class="btn btn-primary btn-lg">Get token</button>
         </form>   
+
       </div>
     </div>
 
@@ -70,7 +71,7 @@ file_put_contents("data.json", $response)
       </div>
     </div>
 
-    <footer class="pt-3 mt-4 text-body-secondary">
+    <footer class="pt-3 mt-4 text-body-secondary text-end">
       © 2023
     </footer>
   </div>

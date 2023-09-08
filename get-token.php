@@ -60,7 +60,7 @@ $token = getAnAcceptPaymentPage();
       </div>
     </div>
 
-    <footer class="pt-3 mt-4 text-body-secondary">
+    <footer class="pt-3 mt-4 text-body-secondary text-end">
       © 2023
     </footer>
   </div>
