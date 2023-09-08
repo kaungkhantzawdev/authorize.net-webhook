@@ -1,0 +1,105 @@
+{
+  "_links": {
+    "self": {
+      "href": "/rest/v1/notifications?offset=0&limit=100&from_date=2023-07-10&to_date=2023-09-08"
+    }
+  },
+  "notifications": [
+    {
+      "_links": {
+        "self": {
+          "href": "/rest/v1/notifications/73c08c23-019d-4f7f-9bdd-84fea5fdf28a"
+        }
+      },
+      "notificationId": "73c08c23-019d-4f7f-9bdd-84fea5fdf28a",
+      "deliveryStatus": "RetryPending",
+      "eventType": "net.authorize.payment.authcapture.created",
+      "eventDate": "2023-09-07T08:35:25.4",
+      "webhookId": "23f65ba9-6bba-46ab-bb38-73beefb6b93e"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/rest/v1/notifications/4ab850e8-1fc4-41df-8b34-f26a62afaaea"
+        }
+      },
+      "notificationId": "4ab850e8-1fc4-41df-8b34-f26a62afaaea",
+      "deliveryStatus": "RetryPending",
+      "eventType": "net.authorize.payment.authcapture.created",
+      "eventDate": "2023-09-07T08:38:05.093",
+      "webhookId": "23f65ba9-6bba-46ab-bb38-73beefb6b93e"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/rest/v1/notifications/49a4b222-41c4-4f71-a6d7-799f36bd2230"
+        }
+      },
+      "notificationId": "49a4b222-41c4-4f71-a6d7-799f36bd2230",
+      "deliveryStatus": "RetryPending",
+      "eventType": "net.authorize.payment.void.created",
+      "eventDate": "2023-09-07T08:43:55.35",
+      "webhookId": "23f65ba9-6bba-46ab-bb38-73beefb6b93e"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/rest/v1/notifications/5fa0bae4-cf26-42ab-a6db-12c3b75017c4"
+        }
+      },
+      "notificationId": "5fa0bae4-cf26-42ab-a6db-12c3b75017c4",
+      "deliveryStatus": "RetryPending",
+      "eventType": "net.authorize.payment.authcapture.created",
+      "eventDate": "2023-09-07T08:57:05.707",
+      "webhookId": "23f65ba9-6bba-46ab-bb38-73beefb6b93e"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/rest/v1/notifications/1e4cf627-ed60-42d3-8116-d282efdccd26"
+        }
+      },
+      "notificationId": "1e4cf627-ed60-42d3-8116-d282efdccd26",
+      "deliveryStatus": "RetryPending",
+      "eventType": "net.authorize.payment.authcapture.created",
+      "eventDate": "2023-09-08T05:17:01.577",
+      "webhookId": "23f65ba9-6bba-46ab-bb38-73beefb6b93e"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/rest/v1/notifications/86b57f0a-61f5-4987-ba76-17e6f7c2a757"
+        }
+      },
+      "notificationId": "86b57f0a-61f5-4987-ba76-17e6f7c2a757",
+      "deliveryStatus": "RetryPending",
+      "eventType": "net.authorize.payment.authcapture.created",
+      "eventDate": "2023-09-08T05:28:28.333",
+      "webhookId": "23f65ba9-6bba-46ab-bb38-73beefb6b93e"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/rest/v1/notifications/ba39666c-160b-4245-a131-4548653e2585"
+        }
+      },
+      "notificationId": "ba39666c-160b-4245-a131-4548653e2585",
+      "deliveryStatus": "RetryPending",
+      "eventType": "net.authorize.payment.authcapture.created",
+      "eventDate": "2023-09-08T07:07:15.09",
+      "webhookId": "23f65ba9-6bba-46ab-bb38-73beefb6b93e"
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/rest/v1/notifications/4a24ff11-fb87-4812-a2b0-07607afbb6a4"
+        }
+      },
+      "notificationId": "4a24ff11-fb87-4812-a2b0-07607afbb6a4",
+      "deliveryStatus": "RetryPending",
+      "eventType": "net.authorize.payment.authcapture.created",
+      "eventDate": "2023-09-08T08:18:15.613",
+      "webhookId": "23f65ba9-6bba-46ab-bb38-73beefb6b93e"
+    }
+  ]
+}
