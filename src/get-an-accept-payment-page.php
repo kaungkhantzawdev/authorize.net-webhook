@@ -15,12 +15,42 @@ function getAnAcceptPaymentPage()
     $merchantAuthentication->setTransactionKey(\SampleCodeConstants::MERCHANT_TRANSACTION_KEY);
     
     // Set the transaction's refId
-    $refId = 'ref' . time();
+    // $refId = 'ref' . time();
+    $refId = 'event_123';
+
+    // Create order information
+    $order = new AnetAPI\OrderType();
+    $order->setInvoiceNumber("inv-000002");
+    $order->setDescription("Judgify Test");
+
+    // Set the customer's identifying information
+    $customerData = new AnetAPI\CustomerDataType();
+    $customerData->setType("individual");
+    $customerData->setId("99999456654");
+    $customerData->setEmail("EllenJohnson@example.com");
+
+    // add to user filed.
+    $merchantDefinedField1 = new AnetAPI\UserFieldType();
+    $merchantDefinedField1->setName("event_id");
+    $merchantDefinedField1->setValue("1128836273");
+    ;
+
+    // tax
+    $tax = new AnetAPI\ExtendedAmountType();
+    $tax->setAmount(5.00);
+    $tax->setName("level2 tax name");
+    $tax->setDescription("level2 tax");
+
+    $currency_code = 'AUD';
 
     //create a transaction
     $transactionRequestType = new AnetAPI\TransactionRequestType();
     $transactionRequestType->setTransactionType("authCaptureTransaction");
-    $transactionRequestType->setAmount("12.23");
+    $transactionRequestType->setOrder($order);
+    // $transactionRequestType->setTax($tax);
+    $transactionRequestType->setCustomer($customerData);
+    $transactionRequestType->addToUserFields($merchantDefinedField1);
+    $transactionRequestType->setAmount("13.99");
 
     // Set Hosted Form options
     $setting1 = new AnetAPI\SettingType();
