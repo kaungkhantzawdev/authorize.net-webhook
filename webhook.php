@@ -28,6 +28,10 @@ print_r($_SERVER);
 
 $decode = $input ? json_encode($input) :( $_GET ? json_encode($_GET): json_encode($_POST)) ;
 
+$_input = fopen(time()."webhook_input.log", "w") or die("Unable to open file!");
+
+fwrite($_input, json_encode($input));
+
 $myfile = fopen(time()."webhook_server.log", "w") or die("Unable to open file!");
 
 fwrite($myfile, json_encode($_SERVER));
