@@ -1,7 +1,6 @@
 <?php
 
 require_once 'src/sha512.php';
-require_once 'constants/SampleCodeConstants.php';
 
 $input = file_get_contents('php://input');
 echo "respone print";
@@ -32,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || json_last_error() !== JSON_ERROR_NO
 $input =  json_encode($input);
 $x_anet_sig = json_encode($_SERVER['HTTP_X_ANET_SIGNATURE']);
 
-if(generateSH512($input, SampleCodeConstants::AUTHNET_SIGNATURE) === $x_anet_sig )
+if(generateSH512($input) === $x_anet_sig )
 {
     $_input = fopen(time()."webhook_input.log", "w") or die("Unable to open file!");
 
@@ -46,7 +45,7 @@ if(generateSH512($input, SampleCodeConstants::AUTHNET_SIGNATURE) === $x_anet_sig
 
 $_error = fopen(time()."webhook_error.log", "w") or die("Unable to open file!");
 
-fwrite("Webhook Error, not same with signature", $input);
+fwrite("Webhook Error, not same with signature", $_error);
 
 
 return;
