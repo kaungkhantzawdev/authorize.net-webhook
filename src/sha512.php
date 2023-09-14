@@ -13,6 +13,4 @@ function generateSH512($textToHash, $signatureKey)
         return null;
     }
 }
-
-generateSH512($textToHash, $signatureKey);
 ?>
