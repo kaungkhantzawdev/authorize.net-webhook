@@ -35,8 +35,8 @@ $token = getAnAcceptPaymentPage();
         <div class="my-3">
           <input type="text" class="form-control" value="<?php echo $token ?>">
         </div>
-        <form method="post" action="https://test.authorize.net/payment/payment" id="formAuthorizeNetTestPage" name="formAuthorizeNetTestPage">
-          <input type="hidden" name="token" value="<?php echo $token ?>" />
+        <form method="post" action="https://test.authorize.net/payment/payment" id="token_form" name="formAuthorizeNetTestPage">
+          <input id="token_data" type="hidden" name="token" value="<?php echo $token ?>" />
           <button id="btnContinue" class="btn btn-primary btn-lg">Continue to next page</button>
         </form>        
     
@@ -66,6 +66,19 @@ $token = getAnAcceptPaymentPage();
   </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script>
 
+    let tokenData = document.getElementById('token_data')
+    let tokenForm = document.getElementById('token_form')
+
+    if(tokenData.value)
+    {
+      setTimeout(() => {
+        tokenForm.submit();
+      }, 300);
+    }
+
+
+</script>
 </body>
 </html>
