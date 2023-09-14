@@ -1,5 +1,7 @@
 <?php
 
+require_once 'src/sha512.php';
+
 $input = file_get_contents('php://input');
 echo "respone print";
 
@@ -18,13 +20,13 @@ echo "<br>";
 echo "I'm from server";
 print_r($_SERVER);
 
-// if ($_SERVER['REQUEST_METHOD'] !== 'POST' || json_last_error() !== JSON_ERROR_NONE)
-// {
-//     http_response_code(400);
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' || json_last_error() !== JSON_ERROR_NONE)
+{
+    http_response_code(400);
 
-//     echo json_encode([ 'error' => 'Invalid request.' ]);
-//     die();
-// }
+    echo json_encode([ 'error' => 'Invalid request.' ]);
+    die();
+}
 
 $decode = $input ? json_encode($input) :( $_GET ? json_encode($_GET): json_encode($_POST)) ;
 
@@ -34,16 +36,7 @@ fwrite($_input, json_encode($input));
 
 $myfile = fopen(time()."webhook_server.log", "w") or die("Unable to open file!");
 
-fwrite($myfile, json_encode($_SERVER));
+fwrite($myfile, json_encode($_SERVER['HTTP_X_ANET_SIGNATURE']));
 
-$myfile_get = fopen(time()."webhook_get.log", "w") or die("Unable to open file!");
-
-fwrite($myfile_get, json_encode($_GET));
-
-$myfile_post = fopen(time()."webhook_post.log", "w") or die("Unable to open file!");
-
-fwrite($myfile_post, json_encode($_POST));
-
-fclose($myfile);
 
 return;
