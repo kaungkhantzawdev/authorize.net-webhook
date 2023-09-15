@@ -11,30 +11,12 @@ class ComposerStaticInita95a34a1065fd2684dd81f8f2a494425
         array (
             'Developer\\WebhookServer\\' => 24,
         ),
-        'A' => 
-        array (
-            'Authnetjson\\' => 12,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Developer\\WebhookServer\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-        ),
-        'Authnetjson\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/stymiee/authnetjson/src/Authnetjson',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'C' => 
-        array (
-            'Curl' => 
-            array (
-                0 => __DIR__ . '/..' . '/curl/curl/src',
-            ),
         ),
     );
 
@@ -324,7 +306,6 @@ class ComposerStaticInita95a34a1065fd2684dd81f8f2a494425
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInita95a34a1065fd2684dd81f8f2a494425::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita95a34a1065fd2684dd81f8f2a494425::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInita95a34a1065fd2684dd81f8f2a494425::$prefixesPsr0;
             $loader->classMap = ComposerStaticInita95a34a1065fd2684dd81f8f2a494425::$classMap;
 
         }, null, ClassLoader::class);

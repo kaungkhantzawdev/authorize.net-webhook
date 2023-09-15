@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Developer\\WebhookServer\\' => array($baseDir . '/src'),
-    'Authnetjson\\' => array($vendorDir . '/stymiee/authnetjson/src/Authnetjson'),
 );

@@ -28,8 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || json_last_error() !== JSON_ERROR_NO
     die();
 }
 
-$input =  json_encode($input);
-$x_anet_sig = json_encode($_SERVER['HTTP_X_ANET_SIGNATURE']);
+$input =  $input;
+$x_anet_sig = $_SERVER['HTTP_X_ANET_SIGNATURE'];
 
 if(generateSH512($input) === $x_anet_sig )
 {
